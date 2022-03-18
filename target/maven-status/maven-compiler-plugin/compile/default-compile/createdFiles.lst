@@ -1,6 +1,8 @@
-com\driver\DriverRideController.class
-com\driver\Application.class
-com\driver\DriverHelper.class
-com\driver\Config.class
-com\driver\models\Driver.class
-com\driver\models\DriverRide.class
+com\taxii\driver\controller\DriverController.class
+com\taxii\driver\DriverApplication.class
+com\taxii\driver\repository\DriverRepository.class
+com\taxii\driver\models\DriverRide.class
+com\taxii\driver\service\DriverService.class
+com\taxii\driver\config\CassandraConfig.class
+com\taxii\driver\models\Driver.class
+com\taxii\driver\identifier\Identifier.class

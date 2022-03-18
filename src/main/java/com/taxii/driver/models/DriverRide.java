@@ -1,17 +1,25 @@
-package com.driver.models;
+package com.taxii.driver.models;
 
 
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
+
+import com.taxii.driver.identifier.Identifier;
+
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter @Setter @NoArgsConstructor
+@Data @NoArgsConstructor
+@Table("driver_ride")
 public class DriverRide{
 	
-	Double longitude;
-	Double latitude;
-	Integer driverId;
-	Integer driverRideId;
+	@Column Double longitude;
+	@Column Double latitude;
+	@Column @PrimaryKey Integer driverId;
+	@Column Integer driverRideId;
 	
 	public DriverRide(Double longitude, Double largitude, Integer driverId, Integer driverRideId) {
 		this.longitude = longitude;
